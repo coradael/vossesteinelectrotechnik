@@ -1,0 +1,7 @@
+# robots.txt for vossesteinelektrotechniek.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://vossesteinelektrotechniek.com/sitemap.xml
+
