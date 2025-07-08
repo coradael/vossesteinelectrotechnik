@@ -34,11 +34,11 @@
   </article>
 </template>
 <script lang="ts" setup>
-import heroImage, { type HeroImageProps } from '~/components/pagedesign/heroImage.vue';
-import swiperComponent, { type SwiperSlideProps } from '~/components/swiper/swiperComponent.vue';
-import defaultButton from '~/components/ui/defaultButton.vue';
-import readMoreArticleComponent, { type ReadMoreArticleProps } from '~/components/pagedesign/readMoreArticle.vue';
-import partnersBanner from '~/components/pagedesign/partnersBanner.vue';
+import heroImage, { type HeroImageProps } from '../components/pagedesign/heroImage.vue';
+import swiperComponent, { type SwiperSlideProps } from '../components/swiper/swiperComponent.vue';
+import defaultButton from '../components/ui/defaultButton.vue';
+import readMoreArticleComponent, { type ReadMoreArticleProps } from '../components/pagedesign/readMoreArticle.vue';
+import partnersBanner from '../components/pagedesign/partnersBanner.vue';
 
 const heroImageProps: HeroImageProps = {
   imagePath: '/images/Vossestein Buzz-6193.jpg',
@@ -88,6 +88,9 @@ useSeoMeta({
   ogImage: 'https://www.vossesteinelektrotechniek.nl/images/Vossestein Buzz-6193.jpg',
 })
 
+function useSeoMeta(arg0: { title: string; ogSiteName: string; ogTitle: string; ogDescription: string; ogUrl: string; ogType: string; ogImage: string; }) {
+  throw new Error('Function not implemented.');
+}
 </script>
 
 <style scoped>

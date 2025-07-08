@@ -111,9 +111,9 @@
   </div>
 </template>
 <script lang="ts" setup>
-import heroImage, { type HeroImageProps } from '~/components/pagedesign/heroImage.vue';
-import readMoreArticleComponent, { type ReadMoreArticleProps } from '~/components/pagedesign/readMoreArticle.vue';
-import contactform from '~/components/contactform/contactform.vue';
+import heroImage, { type HeroImageProps } from '../components/pagedesign/heroImage.vue';
+import readMoreArticleComponent, { type ReadMoreArticleProps } from '../components/pagedesign/readMoreArticle.vue';
+import contactform from '../components/contactform/contactform.vue';
 
 const heroImageProps: HeroImageProps = {
   imagePath: '/images/zonne-energie-article.png',
@@ -139,5 +139,8 @@ useSeoMeta({
   ogImage: 'https://www.vossesteinelektrotechniek.nl/images/zonne-energie-article.png',
 })
 
+function useSeoMeta(arg0: { title: string; ogSiteName: string; ogTitle: string; ogDescription: string; ogUrl: string; ogType: string; ogImage: string; }) {
+  throw new Error('Function not implemented.');
+}
 </script>
 

@@ -14,7 +14,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import type { ContactFormInputType } from '~/server/api/contactform.post';
+import type { ContactFormInputType } from '../../server/api/contactform.post';
 
 const nameRules = [
   (v: string) => !!v || 'Naam is verplicht',

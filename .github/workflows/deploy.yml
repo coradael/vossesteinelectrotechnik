@@ -1,38 +1,38 @@
-# name: Deploy Nuxt App to Hostinger
+name: Deploy Nuxt App to Hostinger
 
-# on:
-#   push:
-#     branches:
-#       - main  # or your deploy branch
+on:
+  push:
+    branches:
+      - main  # or your deploy branch
 
-# jobs:
-#   build-and-deploy:
-#     runs-on: ubuntu-latest
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
 
-#     steps:
-#     - name: Checkout code
-#       uses: actions/checkout@v3
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-#     - name: Setup Node
-#       uses: actions/setup-node@v4
-#       with:
-#         node-version: 20
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
 
-#     - name: Install dependencies
-#       run: npm install
+    - name: Install dependencies
+      run: npm install
 
-#     - name: Build Nuxt app
-#       run: npm run build
+    - name: Build Nuxt app
+      run: npm run build
 
-#     - name: Generate static files (for Nuxt 3 or SSG setup)
-#       run: npm run generate
+    - name: Generate static files (for Nuxt 3 or SSG setup)
+      run: npm run generate
 
-#     - name: Upload via FTP to Hostinger
-#       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-#       with:
-#         server: ${{ secrets.HOSTINGER_HOST }}
-#         username: ${{ secrets.HOSTINGER_USERNAME }}
-#         password: ${{ secrets.HOSTINGER_PASSWORD }}
-#         server-dir: /public_html/     # Adjust as needed
-#         local-dir: ./dist/             # Default Nuxt generate output
+    - name: Upload via FTP to Hostinger
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.HOSTINGER_HOST }}
+        username: ${{ secrets.HOSTINGER_USERNAME }}
+        password: ${{ secrets.HOSTINGER_PASSWORD }}
+        server-dir: /public_html/     # Adjust as needed
+        local-dir: ./dist/             # Default Nuxt generate output
 

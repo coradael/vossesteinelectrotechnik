@@ -65,8 +65,8 @@
   </div>
 </template>
 <script lang="ts" setup>
-import heroImage, { type HeroImageProps } from '~/components/pagedesign/heroImage.vue';
-import readMoreArticleComponent, { type ReadMoreArticleProps } from '~/components/pagedesign/readMoreArticle.vue';
+import heroImage, { type HeroImageProps } from '../components/pagedesign/heroImage.vue';
+import readMoreArticleComponent, { type ReadMoreArticleProps } from '../components/pagedesign/readMoreArticle.vue';
 
 const heroImageProps: HeroImageProps = {
   imagePath: '/images/vossestein-werken-bij.jpg',
@@ -92,6 +92,9 @@ useSeoMeta({
   ogImage: 'https://www.vossesteinelektrotechniek.nl/images/vossestein-werken-bij.jpg',
 })
 
+function useSeoMeta(arg0: { title: string; ogSiteName: string; ogTitle: string; ogDescription: string; ogUrl: string; ogType: string; ogImage: string; }) {
+  throw new Error('Function not implemented.');
+}
 </script>
 <style scoped>
 .double-list {
